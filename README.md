@@ -1,12 +1,12 @@
-#Z'-explorer : a simple tool to probe Z' models against LHC data
+# Z'-explorer : a simple tool to probe Z' models against LHC data
 
-##A QUICK START USER GUIDE
+## A QUICK START USER GUIDE
 
 
 ### Ezequiel Álvarez, Rosa María Sandá Seoane, Mariel Estévez 
 
 
-####SET UP
+#### SET UP
 
 
 
@@ -20,7 +20,7 @@ If changes in source code are done, set on lib folder and put make before runnin
 
 
 
-####SET MODEL:
+#### SET MODEL:
 
 
 
@@ -43,7 +43,7 @@ In /incard/example/SSM can be found an incard example for a Sequential Standard 
 
 
 
-####RUN
+#### RUN
 
 
 
@@ -54,7 +54,7 @@ After providing an incard, set on the main directory and write ./program.out.
 
 
 
-####EXPLORATION RESULTS:
+#### EXPLORATION RESULTS:
 
 
 
@@ -78,7 +78,7 @@ More information about calculation can be found in /extra folder:
 
 
 
-####EXPERIMENTAL INFORMATION:
+#### EXPERIMENTAL INFORMATION:
 
 Available experimental data from LHC to all possible Z' decay channels is stored in  /cards folder as experimental cards. Data is specified in two columns, where first one is the corresponding Z'mass (in TeV) and second one is the corresponding σlim (in pb): 
 
@@ -101,7 +101,7 @@ User can update the experimental information just by replacing the corresponding
 
 
 
-####RECORDED SIMULATIONS USED BY Z'-EXPLORER:
+#### RECORDED SIMULATIONS USED BY Z'-EXPLORER:
 
 For computing Z' production cross section, previously generated and recorded production cross section with MadGraph5_aMC@NLO (arXiv:1405.0301) is stored in /cards folder as simulation cards. These simulations were generated with a tailored Z' model which couples with unity to only one quark in the proton each time, at sqrt(s) = 13 TeV. 
 
