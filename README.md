@@ -10,11 +10,11 @@
 
 
 
-Download main directory into your system. No aditionally steps are required.
+Download main directory into your system. To start, set on lib folder and put make. No aditionally steps are required.
 
 The script runs on C++.
 
-If changes in source code are done, set on lib folder and put make before running.
+If changes in source code are done, set on lib folder again and put make before running.
 
 
 
