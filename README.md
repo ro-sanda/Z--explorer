@@ -24,10 +24,10 @@ If changes in source code are done, set on lib folder again and put make before 
 
 
 
-Information about the Z' model must be provided through an incard, that must be stored as /incard/card_1.dat. For each reference point in parameter space, the following information must be provided in columns:
+Information about the Z' model must be provided through an incard, that must be stored as /incard/card_1.dat. For each reference point in parameter space, the following information must be provided in columns (separate by space):
 
 
-M, guL, guR, gdL, gdR, gcL, gcR, gsL, gsR, gbL, gbR, gtL, gtR, geL, geR, gμL, gμR, gτL, gτR, Γinv, Γww, Γzh, Γxx
+M  guL guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  gμR  gτL  gτR  Γinv  Γww  Γzh  Γxx
 
 
 where M is de Z' mass (in TeV), gfL/R is the coupling of the Z' to the corresponding left/right fermion, and Γinv, Γww, Γhz are the partial widths to inv, WW and ZH. The total width to non SM particles  can be added as Γxx.
@@ -61,7 +61,7 @@ After providing an incard, set on the main directory and write ./program.out.
 The generated output file is saved in /output/1.dat. The output contains the following information for each reference point set in incard:
  
 
-M, guL, guR, gdL, gdR, gcL, gcR, gsL, gsR, gbL, gbR, gtL, gtR, geL, geR, gμL, gμR, gτL, gτR, Γinv, Γww, Γzh, Γxx, Sjj, Sbb, Stt, See, Sμμ, Sττ, Sinv, SWW, SZH, Sxx
+M  guL  guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  gμR  gτL  gτR  Γinv  Γww  Γzh  Γxx  Sjj  Sbb  Stt  See  Sμμ  Sττ  Sinv  SWW  SZH  Sxx
 
 
 where S(defined as σpred/σlim) is the strength of the signal in each possible Z' decay channel.
