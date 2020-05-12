@@ -1,4 +1,4 @@
-# Z'-explorer : a simple tool to probe Z' models against LHC data
+# <a href="https://arxiv.org/pdf/2005.05194.pdf" target=newwindow >Z'-explorer : a simple tool to probe Z' models against LHC data</a>
 
 ## A QUICK START USER GUIDE
 
@@ -120,5 +120,5 @@ These simulations are combined to the incard data to calculate σpred.
 
 
 
-For more information, please visit the associated publication *"Z'-explorer : a simple tool to probe Z' models against LHC data".*
+For more information, please visit the associated publication *"Z'-explorer : a simple tool to probe Z' models against LHC data".* (https://arxiv.org/pdf/2005.05194.pdf)
 
