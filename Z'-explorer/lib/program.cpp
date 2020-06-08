@@ -412,31 +412,84 @@ for(q1=0 ; q1<in_row ; q1++){
 }
 
 
-
+//save(ke1,6,2,in_row,1);
 
 
 
 
 //Take for each mass in the incard the experimental limits in the cross-section for each channel (at closest mass).
 
+double outlier=1e9;
 
 int s=0;
   printf("\nExtracting cross-section limits from experimental cards...");
   for(s=0 ; s<in_row ; s++){
       xsBRexp[11*s + 0]=mass[s];
-      xsBRexp[11*s + 1]=exp_1[2*(int) ke1[s]+1];//uu+dd+cc+ss (jj)
-      xsBRexp[11*s + 2]=exp_2[2*(int) ke2[s]+1];//bb
-      xsBRexp[11*s + 3]=exp_3[2*(int) ke3[s]+1];//tt
-      xsBRexp[11*s + 4]=exp_4[2*(int) ke4[s]+1];//ee
-      xsBRexp[11*s + 5]=exp_5[2*(int) ke5[s]+1];//mumu
-      xsBRexp[11*s + 6]=exp_6[2*(int) ke6[s]+1];//tautau
-      xsBRexp[11*s + 7]=exp_7[2*(int) ke7[s]+1];//inv
-      xsBRexp[11*s + 8]=exp_8[2*(int) ke8[s]+1];//WW
-      xsBRexp[11*s + 9]=exp_9[2*(int) ke9[s]+1];//ZH
-      xsBRexp[11*s + 10]=exp_10[2*(int) ke10[s]+1];//XX
 
+      if(int(ke1[s])==(row_e_1-1) || int(ke1[s])==0){
+      xsBRexp[11*s + 1]=outlier;//uu+dd+cc+ss (jj)
+      }else{
+      xsBRexp[11*s + 1]=exp_1[2*(int) ke1[s]+1];//uu+dd+cc+ss (jj)
+      }
+
+      if(int(ke2[s])==(row_e_2-1) || int(ke2[s])==0){
+      xsBRexp[11*s + 2]=outlier;//bb
+      }else{
+      xsBRexp[11*s + 2]=exp_2[2*(int) ke2[s]+1];//bb
+      }
+
+      if(int(ke3[s])==(row_e_3-1) || int(ke3[s])==0){
+      xsBRexp[11*s + 3]=outlier;//tt
+      }else{
+      xsBRexp[11*s + 3]=exp_3[2*(int) ke3[s]+1];//tt
+      }   
+
+      if(int(ke4[s])==(row_e_4-1) || int(ke4[s])==0){
+      xsBRexp[11*s + 4]=outlier;//ee
+      }else{
+      xsBRexp[11*s + 4]=exp_4[2*(int) ke4[s]+1];//ee
+      }   
+
+
+      if(int(ke5[s])==(row_e_5-1) || int(ke5[s])==0){
+      xsBRexp[11*s + 5]=outlier;//mumu
+      }else{
+      xsBRexp[11*s + 5]=exp_5[2*(int) ke5[s]+1];//mumu
+      }
+      
+      if(int(ke6[s])==(row_e_6-1) || int(ke6[s])==0){
+      xsBRexp[11*s + 6]=outlier;//tautau
+      }else{
+      xsBRexp[11*s + 6]=exp_6[2*(int) ke6[s]+1];//tautau
+      }
+
+      if(int(ke7[s])==(row_e_7-1) || int(ke7[s])==0){
+      xsBRexp[11*s + 7]=outlier;//inv
+      }else{
+      xsBRexp[11*s + 7]=exp_7[2*(int) ke7[s]+1];//inv
+      }
+
+      if(int(ke8[s])==(row_e_8-1) || int(ke8[s])==0){
+      xsBRexp[11*s + 8]=outlier;//WW
+      }else{
+      xsBRexp[11*s + 8]=exp_8[2*(int) ke8[s]+1];//WW
+      }
+
+      if(int(ke9[s])==(row_e_9-1) || int(ke9[s])==0){
+      xsBRexp[11*s + 9]=outlier;//ZH
+      }else{
+      xsBRexp[11*s + 9]=exp_9[2*(int) ke9[s]+1];//ZH
+      }
+
+      if(int(ke10[s])==(row_e_10-1) || int(ke10[s])==0){
+      xsBRexp[11*s + 10]=outlier;//XX
+      }else{
+      xsBRexp[11*s + 10]=exp_10[2*(int) ke10[s]+1];//XX
+      }      
      
   }
+
+
 
 
 char  headerssiglim[11][22] = { "     M     ", "   σlim_jj   ", "   σlim_bb   ", "   σlim_tt   ", "   σlim_ee   ", "   σlim_μμ   ", "   σlim_ττ   ", "   σlim_inv   ", "   σlim_WW   ", "   σlim_ZH   ", "   σlim_XX   "
