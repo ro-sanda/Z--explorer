@@ -86,8 +86,8 @@ Available experimental data from LHC to all possible Z' decay channels is stored
 exp_card_1.dat-> jj (arXiv:1910.08447)
 exp_card_2.dat-> bb (arXiv:1805.09299)
 exp_card_3.dat-> tt (arXiv:1810.05955)
-exp_card_4.dat-> ee (CMS-PAS-EXO-10-019)
-exp_card_5.dat-> μμ (CMS-PAS-EXO-10-019)
+exp_card_4.dat-> ee (CMS-PAS-EXO-19-019)
+exp_card_5.dat-> μμ (CMS-PAS-EXO-19-019)
 exp_card_6.dat-> ττ (arXiv:1709.07242)
 exp_card_7.dat-> inv -
 exp_card_8.dat-> ww (arXiv:1710.07235)
