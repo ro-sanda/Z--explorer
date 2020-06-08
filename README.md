@@ -103,7 +103,7 @@ User can update the experimental information just by replacing the corresponding
 
 #### RECORDED SIMULATIONS USED BY Z'-EXPLORER:
 
-For computing Z' production cross section, previously generated and recorded production cross section with MadGraph5_aMC@NLO (arXiv:1405.0301) is stored in */cards/* folder as simulation cards. These simulations were generated with a tailored Z' model which couples with unity to only one quark in the proton each time, at sqrt(s) = 13 TeV. 
+For computing Z' production cross section, previously generated and recorded production cross section with MadGraph5_aMC@NLO (arXiv:1405.0301) is stored in */cards/* folder as simulation cards. These simulations were generated with a tailored Z' model which couples with unity to only one quark in the proton each time, at sqrt(s) = 13 TeV, and for M between 0.4 and 8 TeV (the range of masses that can be explored with Z'-explorer).
 
 sim_card_1.dat->  uu-->Z'
 sim_card_2.dat->  dd-->Z'
