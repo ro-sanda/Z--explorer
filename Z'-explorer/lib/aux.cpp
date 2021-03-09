@@ -333,7 +333,7 @@ for(c=0 ; c<TAM_C ; c++){ //go through all the columns of headers
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void saveo(double *matrix,char headers[33][22], int num,int option,int rows,int columns){    
+void saveo(double *matrix,char headers[35][22], int num,int option,int rows,int columns){    
      
 
   int TAM_C=columns;
@@ -608,11 +608,11 @@ double sigmatot(double *matrix1,int row1,int tam_cols1,double *matrix2,int row2,
 
     double result=0.0;
 
-    result= ( matrix1[tam_cols1*row1+1]*matrix1[tam_cols1*row1+1] + matrix1[tam_cols1*row1+2]*matrix1[tam_cols1*row1+2] ) * matrix2[tam_cols2*row2 + 1]/2.0
-+( matrix1[tam_cols1*row1+3]*matrix1[tam_cols1*row1+3] + matrix1[tam_cols1*row1+4]*matrix1[tam_cols1*row1+4] ) * matrix3[tam_cols3*row3 + 1]/2.0
-+( matrix1[tam_cols1*row1+5]*matrix1[tam_cols1*row1+5] + matrix1[tam_cols1*row1+6]*matrix1[tam_cols1*row1+6] ) * matrix4[tam_cols4*row4 + 1]/2.0
-+( matrix1[tam_cols1*row1+7]*matrix1[tam_cols1*row1+7] + matrix1[tam_cols1*row1+8]*matrix1[tam_cols1*row1+8] ) * matrix5[tam_cols5*row5 + 1]/2.0
-+( matrix1[tam_cols1*row1+9]*matrix1[tam_cols1*row1+9] + matrix1[tam_cols1*row1+10]*matrix1[tam_cols1*row1+10] ) * matrix6[tam_cols6*row6 + 1]/2.0;
+    result= ( matrix1[tam_cols1*row1+1]*matrix1[tam_cols1*row1+1] + matrix1[tam_cols1*row1+2]*matrix1[tam_cols1*row1+2] ) * matrix2[tam_cols2*row2 + 1]
++( matrix1[tam_cols1*row1+3]*matrix1[tam_cols1*row1+3] + matrix1[tam_cols1*row1+4]*matrix1[tam_cols1*row1+4] ) * matrix3[tam_cols3*row3 + 1]
++( matrix1[tam_cols1*row1+5]*matrix1[tam_cols1*row1+5] + matrix1[tam_cols1*row1+6]*matrix1[tam_cols1*row1+6] ) * matrix4[tam_cols4*row4 + 1]
++( matrix1[tam_cols1*row1+7]*matrix1[tam_cols1*row1+7] + matrix1[tam_cols1*row1+8]*matrix1[tam_cols1*row1+8] ) * matrix5[tam_cols5*row5 + 1]
++( matrix1[tam_cols1*row1+9]*matrix1[tam_cols1*row1+9] + matrix1[tam_cols1*row1+10]*matrix1[tam_cols1*row1+10] ) * matrix6[tam_cols6*row6 + 1];
     
     return result;
 }

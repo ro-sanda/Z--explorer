@@ -8,7 +8,7 @@ void save(double *matriz,int num,int opcion,int filas,int columnas);
 void savew(double *matriz, char headers[13][22], int num,int opcion,int filas,int columnas);
 void savebr(double *matriz, char headers[10][22], int num,int opcion,int filas,int columnas);
 void savex(double *matriz, char headers[11][22], int num,int opcion,int filas,int columnas);
-void saveo(double *matriz, char headers[33][22], int num,int opcion,int filas,int columnas);
+void saveo(double *matriz, char headers[35][22], int num,int opcion,int filas,int columnas);
 
 
 double gamma_jj(double *matrix,int row,int option,int tam_cols);

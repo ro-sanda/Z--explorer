@@ -136,6 +136,9 @@ printf("\nThe incard has %d rows and %d columns\n\n", in_row, in_col);
   double *widths;
   widths=(double *) malloc(sizeof(double)*in_row*13);
 
+  double *totalwidth;
+  totalwidth=(double *) malloc(sizeof(double)*in_row*1); 
+
   double *mass;
   mass=(double *) malloc(sizeof(double)*in_row*1); //There are in_row masses in total
 
@@ -149,7 +152,7 @@ printf("\nThe incard has %d rows and %d columns\n\n", in_row, in_col);
   xsBRexp=(double *) malloc(sizeof(double)*in_row*11);
 
   double *strength;
-  strength=(double *) malloc(sizeof(double)*in_row*33);
+  strength=(double *) malloc(sizeof(double)*in_row*35);
 
 //  char *headers;
 //  headers=(char *) malloc(sizeof(char)*31);
@@ -187,7 +190,7 @@ printf("\n\nReading experimental cards...\n");
 
 //Take data from incard and put it in the corresponding variable
 
-  printf("\nReading incard.dat ...\n");
+  printf("\nReading incard...\n");
   read(in_card,1,in_row,in_col,4);
 
 
@@ -206,7 +209,6 @@ printf("\n\nReading experimental cards...\n");
 //Calculate widths for each final state
 
 
-
       widths[13*t + 0]=gamma_jj(in_card,t,1,in_col);//uu
       widths[13*t + 1]=gamma_jj(in_card,t,2,in_col);//dd
       widths[13*t + 2]=gamma_jj(in_card,t,3,in_col);//cc
@@ -219,11 +221,22 @@ printf("\n\nReading experimental cards...\n");
       widths[13*t + 7]=gamma_ll(in_card,t,2,in_col);//mumu
       widths[13*t + 8]=gamma_ll(in_card,t,3,in_col);//tautau
 
+
 //Take widths from in_card for the case of invisible, WW, HW, XX
+
+
       widths[13*t + 9]=in_card[23*t+19];//invisible
       widths[13*t + 10]=in_card[23*t+20];//WW
       widths[13*t + 11]=in_card[23*t+21];//ZH
       widths[13*t + 12]=in_card[23*t+22];//XX
+
+
+//Calculate total width
+
+
+     totalwidth[t]=widths[13*t + 0]+widths[13*t + 1]+widths[13*t + 2]+widths[13*t + 3]+widths[13*t + 4]+widths[13*t + 5]+widths[13*t + 6]+widths[13*t + 7]+widths[13*t + 8]+widths[13*t + 9]+widths[13*t + 10]+widths[13*t + 11]+widths[13*t + 12];
+
+
   }
 
 //Total: 13 decay widths. Save them in ./extra/2.dat
@@ -234,6 +247,7 @@ char  headersw[13][22] = { "    Γuu     ", "   Γdd   ", "    Γcc     ", "   �
 
   
 savew(widths,headersw,2,2,in_row,13);
+
 
 
 
@@ -506,57 +520,71 @@ savex(xsBRexp,headerssiglim,5,2,in_row,11); //Save in ./extra/5.dat
 
 
 
-char  headers[33][22] = {"    M     ", "   guuL   ", "   guuR   ", "   gddL   ", "   gddR   ", "   gccL   ", "   gccR   ", "   gssL   ", "   gssR   ", "   gbbL   ", "   gbbR   ", "   gttL   ", "   gttR   ", "   geeL   ", "   geeR   ", "   gμμL   ", "   gμμR   ", "   gττL   ", "   gττR   ",  "    Γinv     ",  "    ΓWW     ", "    ΓZH     ",  "    ΓXX     ", "   Sjj   ", "   Sbb   ", "   Stt   ", "   See   ", "   Sμμ   ", "   Sττ   ", "   Sinv   ", "   SWW   ", "   SZH   ", "   SXX   "
+char  headers[35][22] = {"    M     ", "   guuL   ", "   guuR   ", "   gddL   ", "   gddR   ", "   gccL   ", "   gccR   ", "   gssL   ", "   gssR   ", "   gbbL   ", "   gbbR   ", "   gttL   ", "   gttR   ", "   geeL   ", "   geeR   ", "   gμμL   ", "   gμμR   ", "   gττL   ", "   gττR   ",  "    Γinv     ",  "    ΓWW     ", "    ΓZH     ",  "    ΓXX     ", "   Sjj   ", "   Sbb   ", "   Stt   ", "   See   ", "   Sμμ   ", "   Sττ   ", "   Sinv   ", "   SWW   ", "   SZH   ", "   SXX   ", "   ΓZ'   ", "WARNING:ΓZ'>5%"
                     };
 
 
 
 int u=0;
-  printf("\nCalculating strength of each channel...");
+  printf("\nCalculating strength of each channel...\n\n");
   for(u=0 ; u<in_row ; u++){
 
-      strength[33*u + 0]=mass[u];
-      strength[33*u + 1]=in_card[23*u+1];
-      strength[33*u + 2]=in_card[23*u+2];
-      strength[33*u + 3]=in_card[23*u+3];
-      strength[33*u + 4]=in_card[23*u+4];
-      strength[33*u + 5]=in_card[23*u+5];
-      strength[33*u + 6]=in_card[23*u+6];
-      strength[33*u + 7]=in_card[23*u+7];
-      strength[33*u + 8]=in_card[23*u+8];
-      strength[33*u + 9]=in_card[23*u+9];
-      strength[33*u + 10]=in_card[23*u+10];
-      strength[33*u + 11]=in_card[23*u+11];
-      strength[33*u + 12]=in_card[23*u+12];
-      strength[33*u + 13]=in_card[23*u+13];
-      strength[33*u + 14]=in_card[23*u+14];
-      strength[33*u + 15]=in_card[23*u+15];
-      strength[33*u + 16]=in_card[23*u+16];
-      strength[33*u + 17]=in_card[23*u+17];
-      strength[33*u + 18]=in_card[23*u+18];
-      strength[33*u + 19]=in_card[23*u+19];
-      strength[33*u + 20]=in_card[23*u+20];
-      strength[33*u + 21]=in_card[23*u+21];
-      strength[33*u + 22]=in_card[23*u+22];
+      strength[35*u + 0]=mass[u];
+      strength[35*u + 1]=in_card[23*u+1];
+      strength[35*u + 2]=in_card[23*u+2];
+      strength[35*u + 3]=in_card[23*u+3];
+      strength[35*u + 4]=in_card[23*u+4];
+      strength[35*u + 5]=in_card[23*u+5];
+      strength[35*u + 6]=in_card[23*u+6];
+      strength[35*u + 7]=in_card[23*u+7];
+      strength[35*u + 8]=in_card[23*u+8];
+      strength[35*u + 9]=in_card[23*u+9];
+      strength[35*u + 10]=in_card[23*u+10];
+      strength[35*u + 11]=in_card[23*u+11];
+      strength[35*u + 12]=in_card[23*u+12];
+      strength[35*u + 13]=in_card[23*u+13];
+      strength[35*u + 14]=in_card[23*u+14];
+      strength[35*u + 15]=in_card[23*u+15];
+      strength[35*u + 16]=in_card[23*u+16];
+      strength[35*u + 17]=in_card[23*u+17];
+      strength[35*u + 18]=in_card[23*u+18];
+      strength[35*u + 19]=in_card[23*u+19];
+      strength[35*u + 20]=in_card[23*u+20];
+      strength[35*u + 21]=in_card[23*u+21];
+      strength[35*u + 22]=in_card[23*u+22];
 
 
-      strength[33*u + 23]=xsBRsim[11*u+1]/xsBRexp[11*u+1];//uu+dd+cc+ss (jj)
-      strength[33*u + 24]=xsBRsim[11*u+2]/xsBRexp[11*u+2];//bb
-      strength[33*u + 25]=xsBRsim[11*u+3]/xsBRexp[11*u+3];//tt
-      strength[33*u + 26]=xsBRsim[11*u+4]/xsBRexp[11*u+4];//ee
-      strength[33*u + 27]=xsBRsim[11*u+5]/xsBRexp[11*u+5];//mumu
-      strength[33*u + 28]=xsBRsim[11*u+6]/xsBRexp[11*u+6];//tautau
-      strength[33*u + 29]=xsBRsim[11*u+7]/xsBRexp[11*u+7];//inv
-      strength[33*u + 30]=xsBRsim[11*u+8]/xsBRexp[11*u+8];//WW
-      strength[33*u + 31]=xsBRsim[11*u+9]/xsBRexp[11*u+9];//ZH
-      strength[33*u + 32]=xsBRsim[11*u+10]/xsBRexp[11*u+10];//XX
+      strength[35*u + 23]=xsBRsim[11*u+1]/xsBRexp[11*u+1];//uu+dd+cc+ss (jj)
+      strength[35*u + 24]=xsBRsim[11*u+2]/xsBRexp[11*u+2];//bb
+      strength[35*u + 25]=xsBRsim[11*u+3]/xsBRexp[11*u+3];//tt
+      strength[35*u + 26]=xsBRsim[11*u+4]/xsBRexp[11*u+4];//ee
+      strength[35*u + 27]=xsBRsim[11*u+5]/xsBRexp[11*u+5];//mumu
+      strength[35*u + 28]=xsBRsim[11*u+6]/xsBRexp[11*u+6];//tautau
+      strength[35*u + 29]=xsBRsim[11*u+7]/xsBRexp[11*u+7];//inv
+      strength[35*u + 30]=xsBRsim[11*u+8]/xsBRexp[11*u+8];//WW
+      strength[35*u + 31]=xsBRsim[11*u+9]/xsBRexp[11*u+9];//ZH
+      strength[35*u + 32]=xsBRsim[11*u+10]/xsBRexp[11*u+10];//XX
+
+      strength[35*u + 33]=totalwidth[u];//Total width
+      
+
+//Warning about narrow width approximation not satisfied
+
+      if( (totalwidth[u]/mass[u])>0.05){
+      strength[35*u + 34]=1;//Warning! Total width above 5%
+printf("\nWarning, point with width above 5%, check corresponding column in /output/1.dat");
+      }else{
+      strength[35*u + 34]=0;//No warning. Total width bellow 5%
+      }      
+   
+
 }
 
-// Save all the masses (total:in_row) in the incard and the strength for each mass in each channel (total:10) in ./output/1.dat
-  printf("\nComplete!");
+// Save all the masses (total:in_row) in the incard and the strength for each mass in each channel (total:10), with the total width and the narrow width approximation warning in ./output/1.dat
+  printf("\n\nComplete!");
 
 
-  saveo(strength,headers,1,1,in_row,33);
+  saveo(strength,headers,1,1,in_row,35);
 
 
 
