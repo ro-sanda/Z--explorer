@@ -118,7 +118,7 @@ sim_card_3.dat->  cc-->Z'
 sim_card_4.dat->  ss-->Z'
 sim_card_5.dat->  bb-->Z'
 
-These simulations are combined to the incard data to calculate σpred.
+These simulations are combined with the incard data to calculate σpred.
 
 Since these simulations were peformed at leading order using the default tune in MadGraph5_aMC@NLO, the user can build alternative *sim_cards* customizing PDF, factorisation scale, and other relevant parameters. Download the UFO-model */extra-Zprime/* and all files in */TayloredPDFs/* within your MadGraph5_aMC@NLO main directory and execute bash files in order to build the customized *sim_cards*. 
 
