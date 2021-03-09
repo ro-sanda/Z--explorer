@@ -10,7 +10,7 @@
 
 
 
-Download main directory into your system. To start, set on */lib/* folder and run *make*. No aditionally steps are required.
+Download main directory */Z'-explorer/* into your system. To start, set on */lib/* folder and run *make*. No aditionally steps are required. Repeat the same procedure when using the alternative version of the software (download */Z'-explorer-BR/* instead).
 
 The script runs on C++.
 
