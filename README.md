@@ -71,7 +71,7 @@ M  guL  guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  g
 
 where S (defined as σpred/σlim) is the strength of the signal in each possible Z' decay channel, ΓZ' is the Z' total width and the warning displays 1 when ΓZ'>5% and 0 otherwise. 
 
-In *Z'-explorer-BR*, only the strength in each channel is reported in the output file. 
+In *Z'-explorer-BR*, only the strength in each channel is reported in */output/1.dat*. 
 
 
 More information about calculation can be found in */extra/* folder:
@@ -120,7 +120,7 @@ sim_card_5.dat->  bb-->Z'
 
 These simulations are combined to the incard data to calculate σpred.
 
-Since these simulations were peformed at leading order using the default tune in MadGraph5_aMC@NLO, the user can build alternative *sim_cards* customizing PDFgi, factorisation scales, and other relevant parameters. Download and execute *bash* files in */TayloredPDFs/* within your MadGraph5_aMC@NLO main directory. 
+Since these simulations were peformed at leading order using the default tune in MadGraph5_aMC@NLO, the user can build alternative *sim_cards* customizing PDF, factorisation scale, and other relevant parameters. Download all files in */TayloredPDFs/* within your MadGraph5_aMC@NLO main directory and execute bash files in order to build the customized *sim_cards*. 
 
 
 
