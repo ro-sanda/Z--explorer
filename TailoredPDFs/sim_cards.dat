@@ -1,1 +1,13 @@
-
+import model extra-Zprime
+define p = g u c d s b u~ c~ d~ s~ b~
+generate u u~ > zp 
+output sim1uuZp
+generate d d~ > zp 
+output sim2ddZp
+generate c c~ > zp 
+output sim3ccZp
+generate s s~ > zp 
+output sim4ssZp
+generate b b~ > zp 
+output sim5bbZp
+exit
