@@ -33,7 +33,7 @@ where M is de Z' mass (in TeV), gfL/R is the Z' coupling to the corresponding Le
 
 Every reference point in parameter space should be set in a different row. There is no limit in the number of reference points (i.e. rows) that can be explored.
 
-For users who prefer *Z'-explorer-BR*, the following per-line information must be included in */incard/card_1.dat* (separated by spaces, no tabs):
+For users who prefer *Z'-explorer-BR*, the following per-line information must be included in */incard/card_1.dat* (separated by spaces, no tabs), being cautiously to satisfy the narrow-width approximation:
 
 
 M  σ(Z')  BR(jj)  BR(bb)  BR(tt)  BR(ee)  BR(μμ)  BR(ττ)  BR(inv)  BR(WW)  BR(Zh)  BR(xx)
@@ -69,7 +69,9 @@ The generated output file is saved in */output/1.dat* . The output contains the 
 M  guL  guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  gμR  gτL  gτR  Γinv  Γww  Γzh  Γxx  Sjj  Sbb  Stt  See  Sμμ  Sττ  Sinv  SWW  SZh  Sxx   ΓZ'   WARNING:ΓZ'>5%
 
 
-where S (defined as σpred/σlim) is the strength of the signal in each possible Z' decay channel, ΓZ' is the Z' total width and the warning displays 1 when ΓZ'>5% and 0 otherwise.
+where S (defined as σpred/σlim) is the strength of the signal in each possible Z' decay channel, ΓZ' is the Z' total width and the warning displays 1 when ΓZ'>5% and 0 otherwise. 
+
+In *Z'-explorer-BR*, only the strength in each channel is reported in the output file. 
 
 
 More information about calculation can be found in */extra/* folder:
@@ -118,8 +120,7 @@ sim_card_5.dat->  bb-->Z'
 
 These simulations are combined to the incard data to calculate σpred.
 
-
-
+Since these simulations were peformed at leading order using the default tune in MadGraph5_aMC@NLO, the user can build alternative *sim_cards* customizing PDFgi, factorisation scales, and other relevant parameters. Download and execute *bash* files in */TayloredPDFs/* within your MadGraph5_aMC@NLO main directory. 
 
 
 
