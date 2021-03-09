@@ -23,7 +23,6 @@ If changes in source code are done, set on */lib/* folder again and repeat the a
 #### SET MODEL:
 
 
-
 Information about the Z' model must be provided through an incard text file, that must be stored as */incard/card_1.dat*. For each reference point in parameter space, the following information must be provided in columns (separated by spaces, no tabs):
 
 
@@ -33,6 +32,12 @@ M  guL guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  g�
 where M is de Z' mass (in TeV), gfL/R is the Z' coupling to the corresponding Left/Right fermion, and Γinv, Γww, Γhz are the partial widths to invisible, WW and ZH. The total width to non SM particles can be added as Γxx.  If not, leave Γxx as 0.
 
 Every reference point in parameter space should be set in a different row. There is no limit in the number of reference points (i.e. rows) that can be explored.
+
+For users who prefer *Z'-explorer-BR*, the following per-line information must be included in */incard/card_1.dat* (separated by spaces, no tabs):
+
+
+M  σ(Z')  BR(jj)  BR(bb)  BR(tt)  BR(ee)  BR(μμ)  BR(ττ)  BR(inv)  BR(WW)  BR(ZH)  BR(xx)
+
 
 
 In */incard/example/SSM* can be found an incard example for a Sequential Standard Model Z' (Z. Phys. C45 (1989) 109) to perform a test run and check the output card which will be placed at */output/1.dat* .
