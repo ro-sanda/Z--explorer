@@ -188,6 +188,14 @@ int r=0;
 
 
 
+char  headerssigpred[11][22] = { "     M     ", "   σpred_jj   ", "   σpred_bb   ", "   σpred_tt   ", "   σpred_ee   ", "   σpred_μμ   ", "   σpred_ττ   ", "   σpred_inv   ", "   σpred_WW   ", "   σpred_ZH   ", "   σpred_XX   "
+                    };
+
+
+savex(xsBRsim,headerssigpred,4,2,in_row,11); // Save in ./extra/4.dat
+
+
+
 double restae1[row_e_1], ke1[in_row], restae2[row_e_2], ke2[in_row], restae3[row_e_3], ke3[in_row], restae4[row_e_4], ke4[in_row], restae5[row_e_5], ke5[in_row], restae6[row_e_6], ke6[in_row], restae7[row_e_7], ke7[in_row], restae8[row_e_8], ke8[in_row], restae9[row_e_9], ke9[in_row], restae10[row_e_10], ke10[in_row];
 int q1=0;
 int p1=0;
