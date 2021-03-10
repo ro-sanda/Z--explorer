@@ -17,7 +17,7 @@ The five *sim_cards* will be generated inside your *MadGraph5_aMC@NLO* main dire
 with a step of 0.01 TeV, and at sqrt(s)=13 TeV. Changes inside the */Cards/param_card.dat* of each folder are automatically done to ensure that the
 corresponding quark couples with unity to Z' in each folder. 
 
-After execution, the *sim_cards* are ready to be use by the software. Copy them into */Z'-explorer/cards/*. No other step is required.
+After execution, the *sim_cards* are ready to be used by the software. Copy them into */Z'-explorer/cards/*. No other step is required.
 
 
 
