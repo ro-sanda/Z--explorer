@@ -29,7 +29,7 @@ Information about the *Z'* model must be provided through an incard text file, t
 M  guL guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  gμR  gτL  gτR  Γinv  Γww  ΓZh  Γxx
 ~~~
 
-where `M` is the *Z'* mass (in TeV), `gfL/R` is the Z' coupling to the corresponding Left/Right fermion, and `Γinv`, `Γww`, `ΓZh` are the partial widths to invisible, *WW* and *Zh*. The total width to non SM particles can be added as `Γxx`.  If not, leave `Γxx` as 0.
+where `M` is the *Z'* mass (in TeV), `gfL/R` is the *Z'* coupling to the corresponding Left/Right fermion, and `Γinv`, `Γww`, `ΓZh` are the partial widths to invisible, *WW* and *Zh*. The total width to non SM particles can be added as `Γxx`.  If not, leave `Γxx` as 0.
 
 Every reference point in parameter space should be set in a different row. There is no limit in the number of reference points (i.e. rows) that can be explored.
 
