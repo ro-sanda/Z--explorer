@@ -126,5 +126,5 @@ Since these simulations were peformed at leading order using the default tune in
 
 
 
-For more information, please visit the associated publication <a href="https://arxiv.org/pdf/2005.05194.pdf" target=newwindow >"Z'-explorer : a simple tool to probe Z' models against LHC data".*</a>*.
+For more information, please visit the associated publication <a href="https://arxiv.org/pdf/2005.05194.pdf" target=newwindow >"Z'-explorer : a simple tool to probe Z' models against LHC data"*</a>*.
 
