@@ -12,7 +12,7 @@
 
 Download main directory `/Z'-explorer/` into your system. To start, set on `/lib/` folder and run `make`. No aditionally steps are required. Repeat the same procedure when using the alternative version of the software (download `/Z'-explorer-BR/` instead).
 
-The script runs on C++.
+The script runs on *C++*.
 
 If changes in source code are done, set on `/lib/` folder again and repeat the above before running .
 
@@ -107,7 +107,7 @@ User can update the experimental information just by replacing the corresponding
 
 #### RECORDED SIMULATIONS USED BY Z'-EXPLORER:
 
-For computing *Z'* production cross section, previously generated and recorded production cross section with MadGraph5_aMC@NLO  <a href="https://arxiv.org/pdf/1405.0301.pdf" target=newwindow >(arXiv:1405.0301)</a> is stored in `/cards/` folder as simulation cards. These simulations were generated with a tailored *Z'* model which couples with unity to only one quark in the proton each time, at &radic; s = 13 TeV, and for M between 0.4 and 8 TeV (the range of masses that can be explored with *Z'-explorer*).
+For computing *Z'* production cross section, previously generated and recorded production cross section with *MadGraph5_aMC@NLO* <a href="https://arxiv.org/pdf/1405.0301.pdf" target=newwindow >(arXiv:1405.0301)</a> is stored in `/cards/` folder as simulation cards. These simulations were generated with a tailored *Z'* model which couples with unity to only one quark in the proton each time, at &radic; s = 13 TeV, and for M between 0.4 and 8 TeV (the range of masses that can be explored with *Z'-explorer*).
 
 - `sim_card_1.dat`->  *uu-->Z'*
 - `sim_card_2.dat`->  *dd-->Z'*
@@ -117,7 +117,7 @@ For computing *Z'* production cross section, previously generated and recorded p
 
 These simulations are combined with the incard data to calculate σ<sub>pred</sub>.
 
-Since these simulations were peformed at leading order using the default tune in MadGraph5_aMC@NLO, the user can build alternative `sim_cards` customizing PDF, factorization scale, and other relevant parameters. See the README file inside `/TayloredPDFs/` for the instructions. 
+Since these simulations were peformed at leading order using the default tune in *MadGraph5_aMC@NLO*, the user can build alternative `sim_cards` customizing *PDF*, factorization scale, and other relevant parameters. See the README file inside `/TayloredPDFs/` for the instructions. 
 
 
 
