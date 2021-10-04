@@ -69,7 +69,7 @@ The generated output file is saved in `/output/1.dat` . The output contains the 
 M  guL  guR  gdL  gdR  gcL  gcR  gsL  gsR  gbL  gbR  gtL  gtR  geL  geR  gμL  gμR  gτL  gτR  Γinv  Γww  Γzh  Γxx  Sjj  Sbb  Stt  See  Sμμ  Sττ  Sinv  SWW  SZh  Sxx   ΓZ'   WARNING:ΓZ'>5%
 ~~~
 
-where `S` (defined as σpred/σlim) is the strength of the signal in each possible Z' decay channel, `ΓZ'` is the Z' total width and the warning displays 1 when `ΓZ'`>5% and 0 otherwise. 
+where `S` (defined as σ<sub>pred</sub>/σ<sub>lim</sub>) is the strength of the signal in each possible Z' decay channel, `ΓZ'` is the Z' total width and the warning displays 1 when `ΓZ'`>5% and 0 otherwise. 
 
 In *Z'-explorer-BR*, only the strength in each channel is reported in `/output/1.dat`. 
 
@@ -87,7 +87,7 @@ More information about calculation can be found in `/extra/` folder:
 
 #### EXPERIMENTAL INFORMATION:
 
-Available experimental data from LHC to all possible Z' decay channels is stored in  `/cards/` folder as experimental cards. Data is specified in two columns, where the first one is the corresponding Z'mass (in TeV) and the second one is the corresponding σlim (in pb): 
+Available experimental data from LHC to all possible Z' decay channels is stored in  `/cards/` folder as experimental cards. Data is specified in two columns, where the first one is the corresponding Z'mass (in TeV) and the second one is the corresponding σ<sub>lim</sub> (in pb): 
 
 
 - `exp_card_1.dat`-> jj (arXiv:1910.08447)
