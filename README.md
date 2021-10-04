@@ -40,9 +40,7 @@ M  σ(Z')  BR(jj)  BR(bb)  BR(tt)  BR(ee)  BR(μμ)  BR(ττ)  BR(inv)  BR(WW)  
 ~~~
 
 
-In `/incard/example/SSM` can be found an incard example for a Sequential Standard Model *Z'* (Z. Phys. C45 (1989) 109) to perform a test run and check the output card which will be placed at `/output/1.dat` .
-
-
+In `/incard/example/SSM` can be found an incard example for a Sequential Standard Model *Z'* <a href="https://lib-extopc.kek.jp/preprints/PDF/1989/8906/8906326.pdf" target=newwindow >(Z. Phys. C45 (1989) 109)</a> to perform a test run and check the output card which will be placed at `/output/1.dat` .
 
 
 
